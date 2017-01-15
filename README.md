@@ -1,5 +1,5 @@
 # Selfie Indev
-A discord.js v10, fully modular, selfbot.
+A discord.js v11, fully modular, selfbot.
 
 
 # Requirements
