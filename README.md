@@ -12,4 +12,4 @@ A discord.js v10, fully modular, selfbot.
 2. `npm install`
 3. Put your token inside the `""` in config.json
 4. In command prompt do `node self.js`
-5. [OPTION] In config.json you can change your prefix
+5. [OPTIONAL] In config.json you can change your prefix
