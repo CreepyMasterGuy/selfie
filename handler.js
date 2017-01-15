@@ -5,6 +5,7 @@ var kick = require("./commands/kick");
 var info = require("./commands/info");
 var add = require("./commands/add");
 var encdec = require("./commands/encdec");
+const config = require("./config.json")
 
 function clean(text) {
   if (typeof(text) === "string")
@@ -20,7 +21,7 @@ module.exports = function (bot) {
         global.m = m;
         
         //set prefix
-        var p = ">+";
+        var p = config.prefix;
         if (!m.content.startsWith(p)) return;
 
         //args
