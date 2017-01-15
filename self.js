@@ -1,9 +1,10 @@
 var Discord = require("discord.js");
 global.bot = new Discord.Client();
 var handler = require("./handler");
+const config = require("./config.json")
 
 bot.on("ready", () => {
     handler(bot);
 });
 
-bot.login("user-token-here");
+bot.login(config.token);
