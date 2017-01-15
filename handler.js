@@ -4,6 +4,7 @@ var ready = require("./commands/ready");
 var kick = require("./commands/kick");
 var info = require("./commands/info");
 var add = require("./commands/add");
+var encdec = require("./commands/encdec");
 
 function clean(text) {
   if (typeof(text) === "string")
@@ -61,6 +62,16 @@ module.exports = function (bot) {
 		//add
 		if(m.content.startsWith(p + "add")) {
 			add.math();
+		}
+	    	
+	    	//encode
+	    	if(m.content.startsWith(p + "encode")) {
+			encdec.enc();
+		}
+	    
+	    	//decode
+	    	if(m.content.startsWith(p + "decode")) {
+			encdec.dec();
 		}
     });
 };
