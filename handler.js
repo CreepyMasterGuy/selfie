@@ -53,7 +53,7 @@ module.exports = function (bot) {
 				if (typeof evaled !== "string")
 				evaled = require("util").inspect(evaled);
 
-				m.channel.sendCode("xl", clean(evaled));   
+				m.edit("xl", clean(evaled));   
 				} catch(err) {
 				m.channel.sendMessage(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
 				console.log("Eval successfull");
