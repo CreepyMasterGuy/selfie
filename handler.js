@@ -53,7 +53,7 @@ module.exports = function (bot) {
 				if (typeof evaled !== "string")
 				evaled = require("util").inspect(evaled);
 
-				m.edit("xl", clean(evaled));   
+				m.edit("xl", clean(evaled));  
 				} catch(err) {
 				m.channel.sendMessage(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
 				console.log("Eval successfull");
@@ -64,14 +64,15 @@ module.exports = function (bot) {
 		if(m.content.startsWith(p + "add")) {
 			add.math();
 		}
+	    	
 	    	//encode
-                if(m.content.startsWith(p + "encode")) {
-                 encdec.enc(args.join(" "));
-        	}
-        
-            	//decode
-            	if(m.content.startsWith(p + "decode")) {
-           	 encdec.dec(args.join(" "));
-        	}
+	    	if(m.content.startsWith(p + "encode")) {
+			encdec.enc(args.join(" "));
+		}
+	    
+	    	//decode
+	    	if(m.content.startsWith(p + "decode")) {
+			encdec.dec(args.join(" "));
+		}
     });
 };
