@@ -64,15 +64,14 @@ module.exports = function (bot) {
 		if(m.content.startsWith(p + "add")) {
 			add.math();
 		}
-	    	
 	    	//encode
 	    	if(m.content.startsWith(p + "encode")) {
-			encdec.enc();
+			encdec.enc(args.join(" "));
 		}
 	    
 	    	//decode
 	    	if(m.content.startsWith(p + "decode")) {
-			encdec.dec();
+			encdec.dec(args.join(" "));
 		}
     });
 };
