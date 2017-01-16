@@ -65,13 +65,13 @@ module.exports = function (bot) {
 			add.math();
 		}
 	    	//encode
-	    	if(m.content.startsWith(p + "encode")) {
-			encdec.enc(args.join(" "));
-		}
-	    
-	    	//decode
-	    	if(m.content.startsWith(p + "decode")) {
-			encdec.dec(args.join(" "));
-		}
+                if(m.content.startsWith(p + "encode")) {
+                 encdec.enc(args.join(" "));
+        	}
+        
+            	//decode
+            	if(m.content.startsWith(p + "decode")) {
+           	 encdec.dec(args.join(" "));
+        	}
     });
 };
